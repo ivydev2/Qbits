@@ -1,0 +1,388 @@
+img {
+    border-radius: 10%;
+}
+
+
+body { background-color: #000040;
+       background-image: url(background.gif);
+       color: #88ffff;
+       font-family: Verdana, Arial, sans-serif;
+}
+#container { margin-left: auto;    
+       margin-right: auto;
+       width:80%;
+       min-width:700px;
+      }
+      
+div#preload { display: none; }
+  
+#logo {
+  text-align:center;
+  margin: 0;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+}
+
+#pageSubTitle {
+  text-align: center;
+  font-style: italic;
+}
+
+#nav {
+  float: left;
+  width: 200px;
+  padding-top: 10px;
+  text-align:left;
+  color: #88FFFF;
+  font-size: 12px;
+}
+
+#nav a {text-decoration:none;
+                  margin: 15px;
+                  display: block;
+          color: #88FFFF;
+          font-size: 12px;
+}
+
+#nav ul {list-style-type: none;}
+
+#subNav {
+  font-size: .9em;
+}
+
+#content {
+  margin-left: 150px;
+  padding: 30px;
+  overflow:auto;
+  border: medium groove #88FFFF;
+  line-height: 135%;
+  
+}
+
+.floatright {padding-left:20px;
+             float:right;
+       }
+.floatleft {
+  float:left;
+  padding: 30px 0px 20px;
+}
+#footer { font-size: .60em;
+        font-style: italic;
+        text-align: center;
+        border-top: 2px double #000040;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+
+h2 { text-transform: uppercase;
+     color: #88ffff;
+     font-size: 1.2em;
+     border-bottom: 1px none;
+     margin-right: 20px;
+}
+h3 {
+  color: #88ffff;
+  font-size: 1.2em;
+  border-bottom: 1px solid #000000;
+  margin-right: auto;
+  text-align: left;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  line-height: 120%;
+}
+
+.linkRef { 
+  background-color: yellow;
+  font-weight: bold;
+  color: #000000;
+  font-size: 1.5em;
+  }
+  
+.note {
+  color: red;
+  font-size: 1em;
+  font-style: italic;
+  }
+
+
+.details { padding-left:20%;
+           padding-right:20%; 
+}
+
+
+img {border:0; }
+
+           
+.content {
+  margin: 20px;
+  padding: 20px;
+  height: 3700px;
+  width: 500px;
+}
+a {text-decoration:none;
+                  margin: 15px;
+                  display: block;
+          color: #88FFFF;
+          font-size: 12px;
+}
+a:hover {
+  color:  #000040;
+  background-color: #88ffff;
+}
+span {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, mono;
+  color: #88ffff;
+  background-position: center center;
+  text-align: center;
+  vertical-align: middle;
+}
+#play, table {
+  border-collapse: collapse;
+  border: 2px solid #88ffff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+
+#play, th, td {
+  border: 2px solid #88ffff;
+  font-size: 14px;
+  color: #88ffff;
+  padding: 10px;
+  text-align: center;
+}
+
+#game21, table {
+  border-collapse: collapse;
+  border: 2px solid #88ffff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+#conA, table {
+  border: none;
+  width: 80%;
+}
+#conA  td {
+  background-color: orange;
+  padding: 2px;
+  border: none;
+  }
+
+#conB  td {
+  background-color: green;
+  padding: 2px;
+  border: none;
+  }
+  
+#avatarTable  table {
+  width: 100%;
+}
+  
+.conCtr {
+  text-align: center;
+}
+
+.scoreAlign {
+  text-align: right;
+}
+
+.hide {
+  display: none;
+  } 
+  
+.nobdr {
+  border: none;
+  cell-padding: 5px;
+}
+#game0 {
+  margin-left: 0;
+  margin-top: 0em;
+}
+#game1 {
+  margin-left: 2em;
+  margin-top: -1.35em;
+}
+#game2 {
+  margin-left: 4em;
+  margin-top: -1.35em;
+}
+#game3 {
+  margin-left: 6em;
+  margin-top: -1.35em;
+}
+#game4 {
+  margin-left: 8em;
+  margin-top: -1.35em;
+}
+#game5 {
+  margin-left: 10em;
+  margin-top: -1.35em;
+}
+#game6 {
+  margin-left: 12em;
+  margin-top: -1.35em;
+}
+#game7 {
+  margin-left: 14em;
+  margin-top: -1.35em;
+}
+#game8 {
+  margin-left: 16em;
+  margin-top: -1.35em;
+}
+#game9 {
+  margin-left: 18em;
+  margin-top: -1.35em;  
+}
+#hideThis {
+  display: none;
+  }
+
+
+
+  /*main play games table*/
+#content {
+  margin-left: 150px;
+  padding: 30px;
+  overflow:auto;
+  border: medium groove #88FFFF;
+  line-height: 135%;
+  width: 800px;
+  
+}
+
+
+table { 
+  border-collapse: collapse 
+}
+
+
+.floatright {padding-left:20px;
+             float:right;
+       }
+.floatleft {
+  float:left;
+  padding: 30px 0px 20px;
+}
+#footer { font-size: .60em;
+        font-style: italic;
+        text-align: center;
+        border-top: 2px double #000040;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    color: #FFFFFF;
+}
+
+h2 { text-transform: uppercase;
+     color: #88ffff;
+     font-size: 1.2em;
+     border-bottom: 1px none;
+     margin-right: 20px;
+}
+h3 {
+  color: #88ffff;
+  font-size: 1em;
+  border-bottom: 1px solid #000000;
+  margin-right: auto;
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 150px;
+  padding-bottom: 20px;
+  padding-left: 150px;
+  line-height: 130%;
+}
+.details { padding-left:20%;
+           padding-right:20%; 
+}
+
+.style1 {font-size: 18px}
+
+
+img {border:0; }
+
+           
+.content {
+  margin: 20px;
+  padding: 20px;
+  height: 3700px;
+  width: 500px;
+}
+
+
+a {text-decoration:none;
+                  margin: 15px;
+                  display: block;
+          color: #FFFFFF;
+          font-size: 12px;
+}
+
+
+
+a:active
+{
+
+
+} 
+
+span {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, mono;
+  color: #88ffff;
+  background-position: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+table { 
+  border-collapse: collapse 
+}
+
+
+td {
+  border: 2px solid #88ffff;
+  width: 5em;
+  font-family: "Courier New", Courier, mono;
+  font-size: 14px;
+   color: #88ffff;
+}
+
+table{
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 700px;
+}
+
+/*main play games table*/
+th, td {
+    border: 1px solid;
+  color: #63c0ec;
+    overflow: hidden;
+    width: 230px;
+}
+
+#game21, table {
+  border-collapse: collapse;
+  border: 2px solid #88ffff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+
+.content {
+  margin: 20px;
+  padding: 20px;
+  height: 3700px;
+  width: 500px;
+}
