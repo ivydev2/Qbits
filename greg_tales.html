@@ -1,0 +1,154 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Greg's Gambits</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<script type="text/javascript">
+
+		function start_game1()
+		{
+		 	var gender = "boy";
+			var city = "Gainesville";
+			var monster = "";
+			var food = "sushi";
+			var drink = "beer";
+
+      numYears = prompt("Enter a number greater than 0: ");
+      gender = prompt("Is the story about a boy or a girl? ");
+      name = prompt("Enter the hero's name: ");
+      city = prompt("Enter the name of a city: ");
+      monster = prompt("Enter a type of monster: ");
+     food = prompt("Enter a food you like: ");
+    drink = prompt("Enter a drink you like: ");
+      letter = gender.charAt(0);      
+      gender = (letter == "b" || letter == "B")? "King" : "Queen";
+      pronoun = (gender == "King")? "he" : "she";    
+      pronoun2 = (gender == "King")? "his" : "her"; 
+
+
+      document.getElementById('content1').innerHTML=("<p>Once upon a time, about " + numYears + 
+      " years ago, there was a Lion " + gender + " named " + name + ". " + name + 
+      " lived in a land of plenty just outside the " + city + " limits." + name + 
+      " enjoyed walking the lands every day until... One day " + pronoun + 
+      " came upon a " + monster + " sitting on a log eating a " + food + ". The " + monster + 
+      " jumped up, causing " + name + " to spill "+ " "+ pronoun2 +" " +drink + ". " + name + " ran home as fast as " + pronoun + 
+      " could but the " + monster + " followed and ...  " + monster + 
+      " and " + name + " became best friends and lived in " + name + "'s house happily ever after.</p><p>Ending 2: The " + monster + 
+      " overpowered " + name + " and gobbled down all the " + food + " and " + drink + " in " + name + 
+      "'s refrigerator.</p><p>Ending 3: " + name + " screamed mean things at the " + monster + 
+      ", causing the " + monster + " to turn and run back to the woods, never to be seen again.</p>");
+		}
+
+
+		function story2()
+		{
+
+			var yourName;
+			var gender;
+			var numYears;
+			var career;
+			var activity;
+
+			Name = prompt("Please enter your name :");
+			gender = prompt("Are you a boy or girl? :");
+			numYears = prompt("Enter a number between 1 and 5 :");
+			letter = gender.charAt(0);
+			gender = (letter == "b" || letter == "B")?"boy":"girl";
+			pronoun = (gender == "boy")?"he":"she";
+			career = prompt("What was your favorite subject in school? :");
+			activity = prompt("What's your favorite thing to do :");
+
+			
+
+			document.getElementById("content").innerHTML=("Welcome " +Name+ ", it's time to hear your story... Once upon a time, about " +numYears+ " years ago, when you were a young " +gender+ ".  You were asked the same question by everyone. 'What do you want to be when you grow up?' You spent day and night and " + numYears + " years daydreaming about working in the " +career+ " field. But it wouldn't really be 'work' because... <p><h3>You decide the outcome!</h3></p>1. Everyone would say... 'look at how well " +pronoun+ " has done!' <p>2. You decide to take a break from the daydreaming and go " +activity+ "." );
+			
+		}
+
+
+
+
+</script>
+
+
+
+
+
+
+<body>
+<div id="container">
+
+ <img src="../images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Greg's Gambits </em></h1>
+  
+<h2 align="center"><em> Games for Everyone!</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+   <a href="greg_tales.html">Greg's Tales</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutYou.html">Tell Greg ABout you</a></p> 
+
+</div>
+
+<div id ="content"> 
+
+				<div id="content1">
+
+				<p>For this game, you will create a story by entering words as prompted. The story will change each time you run this game, as you enter different words.</p>
+
+
+
+
+				<p>
+
+
+
+				      <table>
+				      <caption>Menu of Stories </caption>
+				        <tr>
+				        <td id="content1"><input type="button" value = "The Lion Part 1" onclick="start_game1()"></td>
+				        <td id="content2"><input type="button" value = "Once upon a time " onclick="story2()"></td>
+				        </tr>
+				        <tr>
+				        <td><img src="http://gdurl.com/Ymkj" width="120" height="120" /></td>
+				        <td> <a href="https://drive.google.com/file/d/0Bz0H4vYjKvJPNGVobDd5X0VTNms/view">Story Time</a></td>
+				        </tr>
+				      </table>
+
+
+
+
+
+
+
+				</p>
+
+
+				</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div id="footer">Copyright &copy; 2017 Greg's Gambits<br />
+<a href="mailto:julius@regal.com">julius@regal.com</a></div>
+</div>
+</body>
+</html>

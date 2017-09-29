@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!--
+ COP 2822
+ Julius Regalado
+ 8/28/2017
+
+
+
+
+ -->
+
+
+
+<title>Greg's Gambits</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<script type="text/javascript">
+
+ function encodeIt()
+ {
+	document.getElementById("message").innerHTML = ("<h2>&nbsp;</h2>");
+	var msg = prompt("Enter your message." , " ");
+	var newmsg = " ";
+	var upCaseCode = 155;
+	var newCode = 0;
+	var lowCaseCode = 219;
+	var specialCode = 3;
+	num = (Math.floor(Math.random() * 4));// used 4 to set small range I could test
+
+	//the loop encodes each letter in the message string
+	for (var j = 0; j < msg.length; j++)
+	{
+		//check for upppercase letters and encode them
+		if ((msg.charCodeAt(j)>=65) && (msg.charCodeAt(j)<=90))
+		{
+		newcode = ((upCaseCode + num) - msg.charCodeAt(j));
+		}
+		else
+		//check for lowercase letters and encode them
+			if ((msg.charCodeAt(j)>=97) && (msg.charCodeAt(j)<=122))
+			{
+				newcode = ((lowCaseCode + num) - msg.charCodeAt(j));
+			}
+			else
+			//check for numbers &  special characters
+			if (((msg.charCodeAt(j) > 90) && (msg.charCodeAt(j) < 97)) || (msg.charCodeAt(j) < 65))
+			{
+				newcode = (msg.charCodeAt(j) + specialCode);
+			}
+
+	newmsg = newmsg + " " + String.fromCharCode(newcode);
+	}
+	
+
+	document.getElementById("secret").innerHTML = ("<h2>" + newmsg + "</h2>");
+	
+
+	var choice = prompt("Do you want the original message displayed? Yes or No?", " ");
+	if ((choice.charAt(0) == 'y') || (choice.charAt(0) == 'Y'))
+	{
+		document.getElementById("message").innerHTML = ("<h2>" + msg + "</h2>");
+
+	}
+	var displaynum = prompt("Do you want to see the random number used in the encryption?", " ");
+	if ((choice.charAt(0) == 'y') || (choice.charAt(0) == 'Y'))
+	{
+		document.getElementById("secretNum").innerHTML = ("<h2>" + num + "</h2>");
+	}
+ }
+
+
+</script>
+
+
+<body>
+<div id="container">
+
+
+ <img src="../images/superhero.jpg" width="120" height="120" class="floatleft" />
+
+ <h1 id="logo"><em>Greg's Gambits </em></h1>
+  
+<h2 align="center"><em> Games for Everyone!</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About Greg</a>
+  <a href="play_games.html">Play a Game</a>
+   <a href="greg_tales.html">Greg's Tales</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutYou.html">Tell Greg ABout you</a></p> 
+
+
+
+
+</div>
+<div id="content">
+
+
+
+	 <h2>Unbreakable Secret Message Encoder </h1>
+	 
+	<p><input type="button" id="encode" value="Enter your message" onclick="encodeIt();" /></p>
+	<table cellpadding="5" width = "90%" align = "center" border="2">
+
+  
+  
+    <tr> <td align="center" id="secret"><p>&nbsp;</p></td> </tr> 
+	<tr> <td align="center" id="message">encoded message</td> </tr>  </table>
+<p>&nbsp;</p>
+
+
+
+
+
+</div>
+<div id="footer">Copyright &copy; 2017 Greg's Gambits<br />
+<a href="mailto:julius@regal.com">julius@regal.com</a></div>
+</div>
+</body>
+</html>
