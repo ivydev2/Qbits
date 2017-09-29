@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Qbit Games</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<!--
+ COP 2822
+ Julius Regalado
+ 8/28/2017
+
+
+
+ -->
+
+
+<script>
+var turn = "x";
+function setBox1(box1)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box1).value="x";
+		document.getElementById(box1).style.background="red";
+		document.getElementById("box1A").src= "../images/X_green.png";
+
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box1).value="o";
+		document.getElementById(box1).style.background="blue";
+		document.getElementById("box1A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox2(box2)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box2).value="x";
+		document.getElementById(box2).style.background="red";
+		document.getElementById("box2A").src= "../images/X_green.png";
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box2).value="o";
+		document.getElementById(box2).style.background="blue";
+		document.getElementById("box2A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox3(box3)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box3).value="x";
+		document.getElementById(box3).style.background="red";
+		document.getElementById("box3A").src= "../images/X_green.png";
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box3).value="o";
+		document.getElementById(box3).style.background="blue";
+		document.getElementById("box3A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox4(box4)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box4).value="x";
+		document.getElementById(box4).style.background="red";
+		document.getElementById("box4A").src= "../images/X_green.png";
+
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box4).value="o";
+		document.getElementById(box4).style.background="blue";
+		document.getElementById("box4A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox5(box5)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box5).value="x";
+		document.getElementById(box5).style.background="red";
+		document.getElementById("box5A").src= "../images/X_green.png";		
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box5).value="o";
+		document.getElementById(box5).style.background="blue";
+		document.getElementById("box5A").src="../images/O_yellow.png"		
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox6(box6)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box6).value="x";
+		document.getElementById(box6).style.background="red";
+		document.getElementById("box6A").src= "../images/X_green.png";		
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box6).value="o";
+		document.getElementById(box6).style.background="blue";
+		document.getElementById("box6A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox7(box7)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box7).value="x";
+		document.getElementById(box7).style.background="red";
+		document.getElementById("box7A").src= "../images/X_green.png";
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box7).value="o";
+		document.getElementById(box7).style.background="blue";
+		document.getElementById("box7A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox8(box8)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box8).value="x";
+		document.getElementById(box8).style.background="red";
+		document.getElementById("box8A").src= "../images/X_green.png";	
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box8).value="o";
+		document.getElementById(box8).style.background="blue";
+		document.getElementById("box8A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function setBox9(box9)
+{
+	if (turn == "x")
+	{
+		document.getElementById(box9).value="x";
+		document.getElementById(box9).style.background="red";
+		document.getElementById("box9A").src= "../images/X_green.png";
+		turn = "o";
+	}
+	else
+	{
+		document.getElementById(box9).value="o";
+		document.getElementById(box9).style.background="blue";
+		document.getElementById("box9A").src="../images/O_yellow.png"
+		turn = "x";
+	}
+	checkWinner();
+}
+
+function checkWinner()
+{
+	if((document.getElementById('box1').value == "x") && (document.getElementById('box2').value == "x") && (document.getElementById('box3').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	if((document.getElementById('box4').value == "x") && (document.getElementById('box5').value == "x") && (document.getElementById('box6').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	if((document.getElementById('box7').value == "x") && (document.getElementById('box8').value == "x") && (document.getElementById('box9').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	if((document.getElementById('box1').value == "x") && (document.getElementById('box4').value == "x") && (document.getElementById('box7').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	
+	if((document.getElementById('box2').value == "x") && (document.getElementById('box5').value == "x") && (document.getElementById('box8').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	
+	if((document.getElementById('box3').value == "x") && (document.getElementById('box6').value == "x") && (document.getElementById('box9').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	if((document.getElementById('box1').value == "x") && (document.getElementById('box5').value == "x") && (document.getElementById('box9').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	
+	if((document.getElementById('box3').value == "x") && (document.getElementById('box5').value == "x") && (document.getElementById('box7').value == "x"))
+	{
+		alert("X is a Winner !!!");
+	}
+	
+	
+	if((document.getElementById('box1').value == "o") && (document.getElementById('box2').value == "o") && (document.getElementById('box3').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	if((document.getElementById('box4').value == "o") && (document.getElementById('box5').value == "o") && (document.getElementById('box6').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	if((document.getElementById('box7').value == "o") && (document.getElementById('box8').value == "o") && (document.getElementById('box9').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	if((document.getElementById('box1').value == "o") && (document.getElementById('box4').value == "o") && (document.getElementById('box7').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	
+	if((document.getElementById('box2').value == "o") && (document.getElementById('box5').value == "o") && (document.getElementById('box8').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	
+	if((document.getElementById('box3').value == "o") && (document.getElementById('box6').value == "o") && (document.getElementById('box9').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	if((document.getElementById('box1').value == "o") && (document.getElementById('box5').value == "o") && (document.getElementById('box9').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	
+	if((document.getElementById('box3').value == "o") && (document.getElementById('box5').value == "o") && (document.getElementById('box7').value == "o"))
+	{
+		alert("O is a Winner !!!");
+	}
+	
+	
+function reset(){
+
+    location.reload();
+
+}
+	
+	
+}
+
+</script>
+
+<body>
+<div id="container">
+
+ <img src="../images/superhero.jpg" width="120" height="120" class="floatleft" />
+ <h1 id="logo"><em>Qbit Games </em></h1>
+  
+<h2 align="center"><em> Games for Everyone!</em></h2>
+
+<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="greg.html">About </a>
+  <a href="play_games.html">Play a Game</a>
+   <a href="greg_tales.html">Qbit Tales</a>
+  <a href="sign.html">Sign In</a>
+  <a href="contact.html">Contact Us</a></p>
+  <a href="aboutYou.html">Tell us aout you</a></p> 
+
+</div>
+<div id="content">
+
+</center>
+<form>
+<table align="center">
+<tr>
+
+<td>
+<input type="text" name="box1" id="box1"  size="1" value="" />
+<a href="JavaScript:setBox1('box1')">
+<img id ="box1A" src="../images/blank1.png"/>
+</a>
+
+</td>
+
+<td>
+<input type="text" name="box2" id="box2" size="1" value="" />
+<a href="JavaScript:setBox2('box2')"><img id ="box2A" src="../images/blank1.png"/></a>
+</td>
+
+<td>
+<input type="text" name="box3" id="box3" size="1" value="" />
+<a href="JavaScript:setBox3('box3')"><img id ="box3A" src="../images/blank1.png"/></a>
+</td>
+
+</tr>
+<td>
+<input type="text" name="box4" id="box4" size="1" value="" />
+<a href="JavaScript:setBox4('box4')"><img id ="box4A" src="../images/blank1.png"/></a>
+</td>
+
+<td>
+<input type="text" name="box5" id="box5" size="1" value="" />
+<a href="JavaScript:setBox5('box5')"><img id ="box5A" src="../images/blank1.png"/></a>
+</td>
+
+<td>
+<input type="text" name="box6" id="box6" size="1" value="" />
+<a href="JavaScript:setBox6('box6')"><img id ="box6A" src="../images/blank1.png"/></a>
+</td>
+<tr>
+
+</tr>
+<tr>
+<td>
+<input type="text" name="box7" id="box7" size="1" value="" />
+<a href="JavaScript:setBox7('box7')"><img id ="box7A" src="../images/blank1.png"/></a>
+</td>
+
+<td>
+<input type="text" name="box8" id="box8" size="1" value="" />
+<a href="JavaScript:setBox8('box8')"><img id ="box8A" src="../images/blank1.png"/></a>
+</td>
+
+<td>
+<input type="text" name="box9" id="box9" size="1" value="" />
+<a href="JavaScript:setBox9('box9')"><img id ="box9A" src="../images/blank1.png"/></a>
+
+
+
+
+</td>
+
+
+</tr>
+</table>
+
+<button onclick="reset()" align=  right>" Play Again"  </button>
+
+</form>
+
+
+
+
+<p>&nbsp;</p>
+
+
+<img src="https://previews.123rf.com/images/styleuneed/styleuneed1206/styleuneed120600111/13915155-tic-tac-toe-symbol-Stock-Photo.jpg" width="120" height="120" />
+
+
+
+</div>
+<div id="footer">Copyright &copy; 2017 Qbit Games<br />
+
+</div>
+</body>
