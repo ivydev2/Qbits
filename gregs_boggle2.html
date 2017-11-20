@@ -1,0 +1,117 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+
+
+<!--
+ COP 2822
+ Julius Regalado
+ 8/28/2017
+
+
+
+ -->
+
+<meta charset="UTF-8">
+<meta name="description" content="Greg's maze">
+  <title>Greg's Gambits | Greg's Boggle 2</title>
+  <link href = "greg.css" rel = "stylesheet" type = "text/css" />  
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<script type = "text/javascript" src="gregBoggle.js"></script>
+<script type = "text/javascript">
+
+function boggle()
+{
+var play = "";
+var score = 0; var flag = 0;
+var num = Math.floor(Math.random()*10) + 1;
+compWords = new Array();
+notAword = new Array();
+playWords = new Array();
+compWords = words(num);
+yourWord = compWords[0];
+document.getElementById("letters").innerHTML = yourWord;
+
+
+//get player entries
+while (play !== "Q" && play !== "q")
+{
+play = prompt("enter a word or enter Q when done");
+playWords.push(play);
+if(play !== "Q" && play !== "q")
+document.getElementById("entries").innerHTML = playWords.toString();
+}
+// Set timer
+for (var t=0; t<1000; t++)
+{
+    
+}
+
+
+
+//check score 
+var complgth = compWords.length;
+var playlgth = (playWords.length - 1);
+for (var i = 0; i < playlgth; i++)
+{
+flag = 0;
+for (var k = 0; k < complgth; k++)
+{
+if(playWords[i] === compWords[k])
+{
+score++;
+flag = 1;
+}
+}
+if (flag === 0)
+notAword.push(playWords[i]);
+}
+document.getElementById("result").innerHTML = ("Your score is " + score + ". The following entries are not valid words: <br />" + notAword.toString());
+}
+</script>
+</head>
+<body>
+  <div id="container">
+    <img src="https://i.pinimg.com/736x/5b/18/3e/5b183eab5263e0ddadf46ce750932239--superhero-font-superhero-images.jpg"  alt="superhero" width="120" height="120" class="floatleft">
+
+    <h1 id="logo"><em>Greg&rsquo;s Gambits </em></h1>  
+    <h2 id="pageSubTitle">Greg's Insane Boggle</h2>
+    <p>&nbsp;</p>
+    
+    <div id="nav">
+      <p><a href="index.html">Home</a>
+      <a href="greg.html">About Greg</a>
+      <a href="play_games.html">Play a Game</a>
+      <a href="sign.html">Sign In</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="aboutyou.html">Tell Greg About You</a></p>
+    </div>
+    
+    <div id="content">
+      <p>The object of the game is to create as many words as you can, in a given time limit, from the letters that will be shown below (the Greg's Advanced Boggle game has 10 different words to create words from instead of 5 in the original game). When you are ready to begin, click the button.</p>
+
+<div class="w3-container">
+
+  <p><button class="w3-button w3-green w3-round-xxlarge"  value = "begin the game" onclick="boggle();" > Lets Play!  </button>
+
+
+  </p>
+</div>
+
+
+
+
+
+
+     <br><br><br><br><br><h2>Letters you can use:</h2><br /><div id="letters">&nbsp;</div><br />
+      <h2>Your words so far: </h2><br /><div id="entries"> &nbsp; </div><br />
+      <h2>Results:</h2><br /><div id = "result">&nbsp;</div>
+    </div>    
+
+    <div id="footer">Copyright &copy; 2013 Greg&rsquo;s Gambits<br>
+      <a href="mailto:jrega@sfcollege.edu">jrega@sfcollege.edu</a>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!--  | Greg's Gambit Project for COP2822.CM1-->
+<head>
+	<title>Greg's Gambits | Greg's Concentration</title>
+	<link href="greg.css" rel="stylesheet" type="text/css" />
+<script>
+var firstCell = "";
+var secondCell = "";
+var firstCellId = "";
+var secondCellId = "";
+var turnCount = 0;
+var matchCount = 0;
+var picArray = new Array(
+
+		["<img src='https://vignette.wikia.nocookie.net/uncyclopedia/images/2/2b/Apple.jpg/revision/latest?cb=20071221025117' width='120' />" ,
+		 "<img src='http://www.allfree-clipart.com/Food/banana.jpg' width='120' />",
+		 "<img src='http://www.allfree-clipart.com/Food/banana.jpg' width='120' />",
+		 "<img src='https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg' width='120' />"
+		],
+
+		["<img src='https://tinyclipart.com/resource/car-clipart/clipart-car-car.jpg' width='120' />",
+		 "<img src='http://www.lifewithcats.tv/wp-content/uploads/2016/01/whitecats1.jpg' width='120' />",
+		 "<img src='https://upload.wikimedia.org/wikipedia/commons/d/dc/Carrot-fb.jpg' width='120' />",
+		 "<img src='http://littletechgirl.com/wp-content/uploads/988120305.png' width='120' />"
+		],
+		["<img src='https://pbs.twimg.com/media/DJ6tjnUW4AA02MF.jpg' width='120' />",
+		  "<img src='https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg' width='120' />",
+		 "<img src='https://tinyclipart.com/resource/car-clipart/clipart-car-car.jpg' width='120' />",
+		 "<img src='https://pbs.twimg.com/media/DJ6tjnUW4AA02MF.jpg' width='120' />"
+		],
+		["<img src='https://vignette.wikia.nocookie.net/uncyclopedia/images/2/2b/Apple.jpg/revision/latest?cb=20071221025117' width='120' />" ,
+		 "<img src='http://www.lifewithcats.tv/wp-content/uploads/2016/01/whitecats1.jpg' width='120' />",
+		 "<img src='https://upload.wikimedia.org/wikipedia/commons/d/dc/Carrot-fb.jpg' width='120' />",
+		 "<img src='http://littletechgirl.com/wp-content/uploads/988120305.png' width='120' />"
+		]);
+
+
+function getImage(x)
+{
+	n = x.split(".");
+	document.getElementById(x).innerHTML = picArray[n[1]][n[2]];
+	turnCount++;
+		if (turnCount == 1 || turnCount % 2 == 1)
+		{
+			firstCellId = x;
+			firstCell = picArray[n[1]][n[2]];
+		}
+		else
+		{
+			secondCellId = x;
+			secondCell = picArray[n[1]][n[2]];
+			compareThem();
+		}
+}
+
+function compareThem()
+{
+	if (firstCell != secondCell)
+	{
+		if (turnCount < 30)
+			{
+				alert("Try again! You have " + ((30 - turnCount) / 2) + " turns left."); 
+				document.getElementById(firstCellId).innerHTML = "<input type='image' src = 'http://what-buddha-said.net/Pics/Buddha.blue.star.jpg' width='60%' onclick = 'getImage(\"" + firstCellId + "\")' />";
+				document.getElementById(secondCellId).innerHTML = "<input type='image' src = 'http://what-buddha-said.net/Pics/Buddha.blue.star.jpg' width='60%' onclick = 'getImage(\"" + secondCellId + "\")' />";
+			}
+			else
+			{
+				alert("Game Over! Better try again.")
+				reloadPage();
+			}	
+	}
+	else
+	{
+		matchCount++;
+		if (matchCount > 0 && matchCount < 8)
+			alert("You found a match! Look for more. You have " + ((30-turnCount) / 2) + " turns left.");
+		else
+		{
+			var endIt = document.createElement("H3");
+			var endMessage = document.createTextNode("Congratulations! You won!");
+			endIt.appendChild(endMessage);
+			document.getElementById("the_end").appendChild(endIt);
+			
+			var restartIt = document.createElement("BUTTON");
+			restartIt.setAttribute("onclick","reloadPage();");
+			var restartButton = document.createTextNode("Play Again");
+			restartIt.appendChild(restartButton);
+			document.getElementById("restart").appendChild(restartIt);
+		}
+	}
+}
+
+function reloadPage()
+{
+	window.location = location.href;
+}
+</script>
+</head>
+<body>
+<div id="container">
+	<img src="https://www.ldatschool.ca/wp-content/uploads/2014/07/Memory.jpg" width='150' class="floatleft" />
+	<h1 id="logo"><em>Greg's Game of Concentration</em></h1>
+	<p>&nbsp;</p>
+<div id="nav">
+  <p><a href="index.html">Home</a>
+  <a href="play_games.html">Play a Game</a>
+  <a href="signin.html">Sign In</a>
+  <a href="aboutyou.html">Tell Greg About You</a>
+  <a href="sign_up.html">Sign up Now!</a></p>
+</div>
+<div id="content" style = "width = 700px; height: auto">
+		<h2>Lets play "How good is your memory?"</h2>
+		<p>Click the squares to reveal the image hidden beneath. Find 8 matching pairs in less than 15 tries to win the game.</p>
+<table width = "100%" align = "center" style="text-align:center;">
+	<tr>
+		<td id = "cell.0.0"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto" onclick = "getImage('cell.0.0')" /></td>
+		<td id = "cell.0.1"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto" onclick = "getImage('cell.0.1')" /></td>
+		<td id = "cell.0.2"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto" onclick = "getImage('cell.0.2')" /></td>
+		<td id = "cell.0.3"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto" onclick = "getImage('cell.0.3')" /></td>
+	</tr>
+	<tr>
+		<td id = "cell.1.0"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"   style= "width: 60%; height: auto" onclick = "getImage('cell.1.0')" /></td>
+		<td id = "cell.1.1"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto"  onclick = "getImage('cell.1.1')" /></td>
+		<td id = "cell.1.2"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.1.2')" /></td>
+		<td id = "cell.1.3"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto"  onclick = "getImage('cell.1.3')" /></td>
+	</tr>
+	<tr>
+		<td id = "cell.2.0"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg"  style= "width: 60%; height: auto" onclick = "getImage('cell.2.0')" /></td>
+		<td id = "cell.2.1"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.2.1')" /></td>
+		<td id = "cell.2.2"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.2.2')" /></td>
+		<td id = "cell.2.3"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto"  onclick = "getImage('cell.2.3')" /></td>
+	</tr>
+	<tr>
+		<td id = "cell.3.0"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.3.0')" /></td>
+		<td id = "cell.3.1"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.3.1')" /></td>
+		<td id = "cell.3.2"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.3.2')" /></td>
+		<td id = "cell.3.3"><input type="image" src = "http://what-buddha-said.net/Pics/Buddha.blue.star.jpg" style= "width: 60%; height: auto" onclick = "getImage('cell.3.3')" /></td>
+	</tr>
+</table>
+	<div id = "the_end">&nbsp;</div>
+	<div id = "restart" align = "center">&nbsp;</div>
+</div>
+	<div id="footer">Copyright &copy; 2017 Greg's Gambits<br />
+	<a href="mailto:jrega@sfcc.edu" >jrega@sfcc.edu</a></div>
+</div>
+</body></html>
